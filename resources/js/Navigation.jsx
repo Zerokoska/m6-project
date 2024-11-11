@@ -9,7 +9,7 @@ export default function Navigation() {
                 <div class="left-menu__header">
                     <img
                         class="left-menu__seal"
-                        src="/img/mi6-seal.png"
+                        src="/images/logos/mi6-seal.png"
                         alt="MI6 seal"
                     />
                 </div>
