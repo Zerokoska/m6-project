@@ -1,5 +1,13 @@
-import List_people_of_interest from "./List_people_of_interest";
+import MainView from "../MainView";
+import Navigation from "../navigation";
 
 export default function App() {
-    return <List_people_of_interest />;
+    return (
+        <>
+            <div className="mainView">
+                <Navigation />
+                <MainView />
+            </div>
+        </>
+    );
 }

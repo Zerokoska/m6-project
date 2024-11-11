@@ -10,7 +10,13 @@ class PersonController extends Controller
 {
     public function index()
     {
-        $result = Person::with(['aliases', 'image', 'status'])->limit(10)->get();
+        $result = Person::with(['aliases', 'image', 'status'])->limit(50)->get();
         return $result;
+    }
+
+    public function show($personId)
+    {
+        $human = Person::with(['aliases', 'image', 'status'])->where('id', $personId)->get();
+        return $human;
     }
 }
