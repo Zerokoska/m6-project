@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Alias extends Model
 {
-    public function Person()
+    public function person()
     {
-        $this->belongsTo(Alias::class);
+        return $this->belongsTo(Person::class);
     }
 }
