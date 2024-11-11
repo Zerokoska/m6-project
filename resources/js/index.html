@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MI6 Agent's interface</title>
+
+    <link rel="stylesheet" href="style.scss">
+  </head>
+  <body>
+
+    <!-- your code here -->
+    <!-- refer to images in /public with URLs beginning with / -->
+
+    <div class="main">
+      <h1>Welcome to MI6</h1>
+    </div>
+
+    <script>
+        const button = document.querySelector('.left-menu__visibility-toggle')
+        const navPanel = document.querySelector('.left-menu')
+
+        button.addEventListener('click', () => {
+            navPanel.classList.toggle('left-menu_hidden')
+            button.textContent = button.textContent == '>' ? '<' : '>'
+        })
+    </script>
+  </body>
+</html>
