@@ -1,9 +1,16 @@
+import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
 export default function Navigation() {
+    const [visible, setVisible] = useState(true);
     return (
         <nav class="left-menu">
-            <div class="left-menu__visibility-toggle">&#60;</div>
+            <div
+                onClick={() => setVisible(!visible)}
+                class="left-menu__visibility-toggle"
+            >
+                &#60;
+            </div>
 
             <div class="left-menu__content">
                 <div class="left-menu__header">

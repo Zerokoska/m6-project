@@ -14,6 +14,7 @@ html {
     display: flex;
     gap: 1rem;
     margin: 0.5rem;
+    overflow-y: scroll;
 }
 
 body {
@@ -33,7 +34,8 @@ body {
 .left-menu {
     background-color: #163838;
     font-family: "Cutive Mono";
-    position: relative;
+    position: fixed;
+    height: 100vh;
 
     &__content {
         padding-top: 2rem;
@@ -99,7 +101,7 @@ body {
     background: #2b5554 url("/images/logos/mi6-seal-bg.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     display: flex;
     flex-direction: column;
     flex-grow: 1;

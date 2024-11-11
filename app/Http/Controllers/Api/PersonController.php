@@ -10,7 +10,7 @@ class PersonController extends Controller
 {
     public function index()
     {
-        $result = Person::with(['aliases', 'image', 'status'])->limit(50)->get();
+        $result = Person::with(['aliases', 'image', 'status'])->limit(18)->get();
         return $result;
     }
 
