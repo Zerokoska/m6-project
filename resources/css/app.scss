@@ -1,0 +1,116 @@
+// your code here
+// refer to images in /public with URLs beginning with /
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Serif+Display:wght@200;400;700&display=swap");
+
+// * {
+//     outline: 1px solid red;
+// }
+
+html {
+    font-family: "Noto Serif Display";
+}
+
+.list-entry {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem;
+    overflow-y: scroll;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.mainView {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    color: white;
+    background-color: #2b5554;
+}
+
+.left-menu {
+    background-color: #163838;
+    font-family: "Cutive Mono";
+    position: fixed;
+    height: 100vh;
+
+    &__content {
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20rem;
+        overflow: hidden;
+        transition: opacity 0.1s, width 1s;
+    }
+
+    &_hidden &__content {
+        opacity: 0;
+        width: 0;
+    }
+
+    &__visibility-toggle {
+        font-family: "Noto Serif Display";
+        position: absolute;
+        top: 1rem;
+        left: 100%;
+        width: 2rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 0.25em 0.25em 0;
+        background-color: #163838;
+        transition: 1s;
+        cursor: pointer;
+    }
+
+    &__header {
+        img {
+            width: 7rem;
+        }
+    }
+
+    &__links {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        overflow: hidden;
+
+        a {
+            color: inherit;
+            font-size: 1.5em;
+            padding: 0.5em;
+            text-decoration: none;
+            text-wrap: nowrap;
+
+            &:hover {
+                background-color: #2b5554;
+            }
+        }
+    }
+}
+
+.main {
+    align-items: center;
+    background: #2b5554 url("/images/logos/mi6-seal-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 1rem;
+
+    h1 {
+        font-weight: 200;
+        font-size: 4rem;
+        margin-top: 0;
+    }
+}
