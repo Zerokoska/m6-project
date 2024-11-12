@@ -8,9 +8,17 @@ use App\Models\Person;
 
 class PersonController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $result = Person::with(['aliases', 'image', 'status'])->limit(18)->get();
+        $status = $request->input('status');
+
+        $query = Person::with(['aliases', 'image', 'status']);
+
+        if (!empty($status)) {
+            $query->where('status_id', $status);
+        }
+
+        $result = $query->limit(200)->get();
         return $result;
     }
 
