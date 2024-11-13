@@ -1,5 +1,8 @@
+import Login from "./Login"
+import Logout from "./Logout"
+import { Link } from "react-router-dom"
 
-function Navigation() {
+function Navigation({setContent}) {
     return(
         <nav className="left-menu">
 
@@ -12,11 +15,15 @@ function Navigation() {
             </div>
   
             <div className="left-menu__links">
-                <a to="/">Home</a>
-                <a to="/people-of-interest">People of interest</a>
+                <Link className="home" to="/" onClick={()=>{setContent("/")}}>Home</Link>
+                <Link className="people_of_interest" onClick={()=>{setContent("people_of_interest")}} to="/">People of interest</Link>
+                <Link className="missions" to="/" onClick={()=>{setContent("missions")}}>Missions</Link>
+                <Link to="/login" onClick={()=>{}}>Login</Link>
+                <Link to="/register">Register</Link>
+                <Logout />
             </div>
         </div>
-        
+
       </nav>
     )
     

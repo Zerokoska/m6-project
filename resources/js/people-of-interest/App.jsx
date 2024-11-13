@@ -1,16 +1,28 @@
+import { useState } from "react";
 import Navigation from "./Navigation";
 import Main from "./Main";
-import People from "./People";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Register from "./Register";
+import Login from "./Login";
+
 
 function App() {
+    const[content, setContent] = useState('');
+
+
     return(
-        <div>
+        <>
+        <BrowserRouter >
+            <Navigation setContent={setContent}/>
             
-            <Navigation />
-            <Main/>
-            <People />
-            
-        </div>
+            <Routes>
+                <Route path="/" element={<Main content={content}/>}/>
+                <Route path="/register" element={<Register />}/>
+                <Route path="/login" element={<Login/>} /> 
+            </Routes>
+
+        </BrowserRouter>
+        </>
     )
 }
 
